@@ -13,8 +13,7 @@ function App() {
       <Properties />
       <SubscriptionCard/>
       <CoworkingSections/>
-     
-      <WhyChooseUs />
+       <WhyChooseUs />
       <Footer />
     </>
   );

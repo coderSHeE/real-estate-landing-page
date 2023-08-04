@@ -8,8 +8,6 @@ const Properties = () => {
     display: "flex",
     justifyContent: "space-between",
     flexWrap : "wrap",
-    
-   
     marginTop: theme.spacing(5),
     [theme.breakpoints.down("md")]: {
       flexDirection: "column", // Fixed typo here
@@ -34,15 +32,15 @@ const Properties = () => {
     <Box sx={{ mt: 5, backgroundColor: "#ffebea", py: 10 }}>
       <Container>
         <PropertiesTextBox >
-          <Typography variant="h2" sx={{ color: "#D2042D" }}>
+          <Typography variant="h3" sx={{ color: "#D2042D" , ml : 2}}>
             Featured Spaces 
           </Typography>
-          <Typography variant="body1" sx={{ color: "#5A6473", mt: 1 }}>
-            Everything you need to know when looking for a new Space for Work!
+          <Typography variant="h6" sx={{ color: "#5A6473", mt: 1 , ml : 2}}>
+          Discover Productive Spaces
           </Typography>
         </PropertiesTextBox>
 
-        <PropertiesBox style={{ color : '#D2042D' }}>
+        <PropertiesBox style={{ color : '#D2042D' , mb : 2}}>
           {properties.map((property) => (
             <House
               key={property.id}

@@ -40,19 +40,19 @@ const Hero = () => {
               sx={{
                 fontSize: "18px",
                 color: "#687690",
-                fontWeight: "500",
-                mt: 10,
+                fontWeight: '520',
+                mt: 2,
                 mb: 4,
               }}
             >
-             Spaces and Innovation is what Inspires us!            </Typography>
-            <Title variant="h1">
-              Discover a place where you'll love to live.
+                 Revolutionizing Work With Us!     
+             </Typography>
+            <Title variant="h2">
+            Boosted Cafes, Budget Co-Working 
             </Title>
             <Typography
               variant="body2"
-              sx={{ fontSize: "18px", color: "#5A6473", my: 4 }}
-            >
+              sx={{ fontSize: "18px", color: "#5A6473", my: 4 }}>
               Work at Cafe & Co-Working Spaces Made Easy and Affordable! Unlock the Best Deals with Us!
             </Typography>
             <CustomButton
@@ -60,6 +60,7 @@ const Hero = () => {
               color="#fff"
               buttonText="More About Us"
               heroBtn={true}
+              
             />
           </Box>
          <Box sx={{ flex: "1.25" }}>

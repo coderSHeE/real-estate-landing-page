@@ -1,75 +1,29 @@
-import { Box, styled, Typography } from "@mui/material";
 import React from "react";
-import bedroomsIcon from "../media/bedroomsIcon.png";
-import bathroomsIcon from "../media/bathroomsIcon.png";
-import spaceIcon from "../media/spaceIcon.png";
+import { Box, Card, CardContent, Typography, Button } from "@mui/material";
 
-const House = ({ img, price, address, bedrooms, bathrooms, space }) => {
-  const HouseBox = styled(Box)(({ theme }) => ({
-    borderTopLeftRadius: "10px",
-    borderTopRightRadius: "10px",
-    maxWidth: 350,
-    backgroundColor: "#fff",
-    margin: theme.spacing(0, 2, 0, 2),
-    [theme.breakpoints.down("md")]: {
-      margin: theme.spacing(2, 0, 2, 0),
-    },
-  }));
-
-  const InfoBox = styled(Box)(() => ({
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  }));
-
-  const ImgContainer = styled(Box)(() => ({
-    width: "100%",
-  }));
-
+const House = ({ img, price, address }) => {
   return (
-    <HouseBox>
-      <ImgContainer>
-        <img src={img} alt="housePhoto" style={{ maxWidth: "100%" }} />
-      </ImgContainer>
-
-      <Box sx={{ padding: "1rem" }}>
-        <Typography variant="body2" sx={{ fontWeight: "700" }}>
-          ${price}
-        </Typography>
-        <Typography variant="body2" sx={{ my: 2 }}>
+    <Card sx={{ maxWidth: 345, minWidth: 250, marginBottom: 2 }}>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <img src={img} alt="" style={{ maxWidth: "100%", height: "auto" }} />
+      </Box>
+      <CardContent>
+        <Typography gutterBottom variant="h6">
           {address}
         </Typography>
-
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <InfoBox>
-            <img src={bedroomsIcon} alt="bedroomsIcon" />
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              {bedrooms}
-            </Typography>
-          </InfoBox>
-
-          <InfoBox>
-            <img src={bathroomsIcon} alt="bathroomssIcon" />
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              {bathrooms}
-            </Typography>
-          </InfoBox>
-
-          <InfoBox>
-            <img src={spaceIcon} alt="spaceIcon" />
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              {space}
-            </Typography>
-          </InfoBox>
+        <Typography variant="body2" color="text.secondary">
+          Price: {price}
+        </Typography>
+        <Box sx={{ display: "flex", justifyContent: "space-between", marginTop: 2 }}>
+        <Button variant="contained" color="primary" sx={{ backgroundColor: "#D2042D" }}>
+            Book
+          </Button>
+          <Button variant="outlined" color="primary" sx={{ backgroundColor: "#FFD700", color: "#D2042D", borderColor: "#FFD700" }}>
+            View Space
+          </Button>
         </Box>
-      </Box>
-    </HouseBox>
+      </CardContent>
+    </Card>
   );
 };
 

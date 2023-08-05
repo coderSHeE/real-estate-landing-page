@@ -5,6 +5,7 @@ import WhyChooseUs from "./Components/GetStarted";
 import Footer from "./Components/Footer";
 import SubscriptionCard from "./Components/Subscription";
 import CoworkingSections from './Components/Benifits';
+import Awards from "./Components/GetStarted";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Properties />
       <SubscriptionCard/>
       <CoworkingSections/>
+      
        <WhyChooseUs />
       <Footer />
     </>
